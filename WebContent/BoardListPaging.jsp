@@ -16,6 +16,10 @@
         }
         serach.submit();      
     }
+  function popup(){
+	  
+  }
+  
   </script>
 </head>
 <body>
@@ -31,9 +35,9 @@
 		<c:forEach var="board" items="${boardList}" >
 			<tr>
 				<td>${board.bnumber}</td>
-				<td><a
-					href="memberview?mid=${board.bwriter}&page=${paging.page}">${board.bwriter}</a></td>
-				
+				<td><a href="memberview?mid=${board.bwriter}&page=${paging.page}"
+					onclick="window.open(this.href,'_blank','width=300px,height=500px,toolbars=no,scrollbars=no');
+					return false;">${board.bwriter}</a></td>	
 				<td><a
 					href="boardview?bnumber=${board.bnumber}&page=${paging.page}">${board.btitle}</a></td>
 				<td>${board.bdate}</td>
@@ -43,7 +47,7 @@
 		<tr>
 			<td colspan="5"><button onclick="location.href='BoardWriteFile.jsp'">글쓰기</button>
 			<button onclick="location.href=
-				'mypage?mid=${sessionScope.loginId}'">마이페이지</button> 
+				'mypage?mid=${sessionScope.loginId}&page=${paging.page}'">마이페이지</button> 
 			<button onclick="location.href=
 				'boardserch?keyfield=hits'">조회수정렬</button></td>
 

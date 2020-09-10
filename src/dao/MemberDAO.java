@@ -141,7 +141,7 @@ public class MemberDAO {
 				memberView.setMphone(rs.getString("MPHONE"));
 				memberView.setMemail(rs.getString("MEMAIL"));
 				memberView.setMgender(rs.getString("MGENDER"));
-				memberView.setImgfile(rs.getString("IMGFILE"));
+				memberView.setImgfile(rs.getString("PROFILE"));
 			}
 		} catch (SQLException e) {
 			e.printStackTrace();

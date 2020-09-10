@@ -60,12 +60,13 @@ public class BoardDAO {
 		return writeResult;
 	}
 
-	public List<BoardDTO> boardList() {
-		String sql = "SELECT * FROM BOARD1 ORDER BY BNUMBER DESC";
+	public List<BoardDTO> boardList(String mid) {
+		String sql = "SELECT * FROM BOARD1 WHERE BWRITER =? ORDER BY BNUMBER DESC";
 		List<BoardDTO> boardList = new ArrayList<BoardDTO>();
 		BoardDTO board = null;
 		try {
 			pstmt = con.prepareStatement(sql);
+			pstmt.setString(1, mid);
 			rs = pstmt.executeQuery();
 			while(rs.next()) {
 				board = new BoardDTO();

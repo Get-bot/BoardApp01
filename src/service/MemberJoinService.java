@@ -25,17 +25,17 @@ public class MemberJoinService {
 		
 		
 		
-		String mid = request.getParameter("mid"); //아이디
-		String mpassword = request.getParameter("mpassword"); //비번
-		String mname = request.getParameter("mname"); //이름 
-		String mbirth = request.getParameter("mbirth"); //생일
-		String mphone = request.getParameter("mphone"); //전번
-		String memail = request.getParameter("memail"); //메일
-		String postcode = request.getParameter("postcode"); //우편번호
-		String address = request.getParameter("address"); //주소
-		String detailAddress = request.getParameter("detailAddress"); //상세주소
-		String extraAddress = request.getParameter("extraAddress"); //참고항목
-		String mgender = request.getParameter("mgender"); //성별
+		String mid = multi.getParameter("mid"); //아이디
+		String mpassword = multi.getParameter("mpassword"); //비번
+		String mname = multi.getParameter("mname"); //이름 
+		String mbirth = multi.getParameter("mbirth"); //생일
+		String mphone = multi.getParameter("mphone"); //전번
+		String memail = multi.getParameter("memail"); //메일
+		String postcode = multi.getParameter("postcode"); //우편번호
+		String address = multi.getParameter("address"); //주소
+		String detailAddress = multi.getParameter("detailAddress"); //상세주소
+		String extraAddress = multi.getParameter("extraAddress"); //참고항목
+		String mgender = multi.getParameter("mgender"); //성별
 		String imgfile = 
 				multi.getOriginalFileName((String)multi.getFileNames().nextElement());
 		

@@ -31,6 +31,7 @@
 		전화번호 : <input type="text" name="mphone" id="mphone" value="${memberUpdate.mphone}"><br>
 		이메일 : <input type="text" name="memail" id="memail" value="${memberUpdate.memail}"><br>
 		비밀번호확인 : <input type="password" name="mpassword" id="mpassword"><br>
+		<input type="hidden" name="page" id="page" value="${page}">
 	</form>
 	<button onclick="memberUpdateProcess()">정보수정</button>
 

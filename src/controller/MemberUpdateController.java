@@ -27,7 +27,9 @@ public class MemberUpdateController extends HttpServlet {
     	String mid = (String) session.getAttribute("loginId");
     	MemberUpdateService mUpdateService = new MemberUpdateService();
     	MemberDTO memberUpdate = mUpdateService.memberUpdate(mid);
-    
+    	int page = Integer.parseInt(request.getParameter("page"));
+    	
+		request.setAttribute("page", page);
     	request.setAttribute("memberUpdate", memberUpdate);
     	RequestDispatcher dispatcher = request.getRequestDispatcher("MemberUpdate.jsp");
     	dispatcher.forward(request, response);
