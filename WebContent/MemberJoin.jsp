@@ -132,11 +132,11 @@
 		<input type="date" name="mbirth" id="mbirth" placeholder="생년월일"><br>
 		<input type="text" name="mphone" id="mphone" placeholder="전화번호"><br>
 		<input type="text" name="memail" id="memail" placeholder="이메일"><br>
-		<input type="text" id="postcode" placeholder="우편번호">
+		<input type="text" name="postcode" id="postcode" placeholder="우편번호">
 		<input type="button" onclick="execDaumPostcode()" value="우편번호 찾기"><br>
-		<input type="text" id="address" placeholder="주소"><br>
-		<input type="text" id="detailAddress" placeholder="상세주소">
-		<input type="text" id="extraAddress" placeholder="참고항목"><br>
+		<input type="text" name="address" id="address" placeholder="주소"><br>
+		<input type="text" name="detailAddress" id="detailAddress" placeholder="상세주소">
+		<input type="text" name="extraAddress" id="extraAddress" placeholder="참고항목"><br>
 		성별 : <input type="radio" name="mgender" value="남자">남
 				<input type="radio" name="mgender" value="여자">여<br>	
 		프로필사진: <input type="file" name="mfile" id="mfile"><br>
